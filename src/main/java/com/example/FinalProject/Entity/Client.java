@@ -1,6 +1,7 @@
 package com.example.FinalProject.Entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Positive;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,7 +19,7 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
-    @Column(nullable = false, columnDefinition = "DECIMAL(19, 2)  CHECK (balance >= 0)")
+    @Column(nullable = false)
+    @Positive
     private BigDecimal balance;
 }
