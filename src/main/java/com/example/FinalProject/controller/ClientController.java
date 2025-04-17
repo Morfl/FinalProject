@@ -1,6 +1,6 @@
-package com.example.FinalProject.Controller;
+package com.example.FinalProject.controller;
 
-import com.example.FinalProject.Service.ClientService;
+import com.example.FinalProject.cervice.ClientService;
 import jakarta.validation.constraints.Positive;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,5 +30,11 @@ public class ClientController {
     public String takeMoney(@PathVariable Long id, @RequestParam @Positive BigDecimal money) {
         return clientService.takeMoney(id, money);
     }
+
+    @PutMapping("/transferMoney/{id}/{toId}")
+    public String takeMoney(@PathVariable Long id, @PathVariable Long toId ,@RequestParam @Positive BigDecimal money) {
+        return clientService.transferMoney(id, toId, money);
+    }
+
 
 }

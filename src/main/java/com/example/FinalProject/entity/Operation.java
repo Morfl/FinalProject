@@ -1,4 +1,4 @@
-package com.example.FinalProject.Entity;
+package com.example.FinalProject.entity;
 
 import com.example.FinalProject.Enum.OperationType;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -26,6 +26,11 @@ public class Operation {
     @NonNull
     @ManyToOne
     private Client client;
+
+    @JsonIgnore
+    @NonNull
+    @ManyToOne
+    private Client toClient;
 
     @Column(nullable = false)
     private String date = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));

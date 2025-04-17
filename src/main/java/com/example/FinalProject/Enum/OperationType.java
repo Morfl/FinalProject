@@ -7,7 +7,9 @@ public enum OperationType {
 
     WITHDRAWAL("Снятие"),
 
-    REFILL("Пополнение");
+    REFILL("Пополнение"),
+
+    TRANSFER("Перевод");
 
     private final String description;
 

@@ -1,4 +1,4 @@
-package com.example.FinalProject.Entity;
+package com.example.FinalProject.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Positive;

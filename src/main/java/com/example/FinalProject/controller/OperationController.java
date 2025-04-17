@@ -1,7 +1,7 @@
-package com.example.FinalProject.Controller;
+package com.example.FinalProject.controller;
 
-import com.example.FinalProject.Entity.Operation;
-import com.example.FinalProject.Service.OperationService;
+import com.example.FinalProject.entity.Operation;
+import com.example.FinalProject.cervice.OperationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
